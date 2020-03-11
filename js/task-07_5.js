@@ -8,7 +8,5 @@ const currentString = document.querySelector("#name-output");
 
 nameInput.addEventListener("input", e => {
   currentString.textContent = e.currentTarget.value;
-  if (currentString === "") {
-    currentString === "незнакомец";
-  }
+  currentString !== "" ? currentString : "незнакомец";
 });

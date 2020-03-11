@@ -7,18 +7,15 @@
 // Добавь слушатели кликов на кнопки, вызовы функций и обновление интерфейса
 
 const valueByIdSpan = document.querySelector("#value");
-let counterValue = 0;
 
 document
   .querySelector('#counter button[data-action="increment"]')
   .addEventListener("click", () => {
-    counterValue += 1;
-    valueByIdSpan.textContent = counterValue;
+    valueByIdSpan.textContent = Number(valueByIdSpan.textContent) + 1;
   });
 
 document
   .querySelector('#counter button[data-action="decrement"]')
   .addEventListener("click", () => {
-    counterValue -= 1;
-    valueByIdSpan.textContent = counterValue;
+    valueByIdSpan.textContent = Number(valueByIdSpan.textContent) - 1;
   });

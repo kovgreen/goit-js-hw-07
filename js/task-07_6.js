@@ -32,8 +32,8 @@ inputById.addEventListener("blur", () => {
   if (setLengthCharacters === enteredQuantity) {
     inputById.classList.add("valid");
     inputById.classList.remove("invalid");
-  } else {
-    inputById.classList.add("invalid");
-    inputById.classList.remove("valid");
+    return;
   }
+  inputById.classList.add("invalid");
+  inputById.classList.remove("valid");
 });

@@ -9,9 +9,9 @@
 // Количество элементов: 4
 
 const category = document.querySelector("#categories");
-console.log(`${category.children.length}`);
+console.log(`В списке ${category.children.length} категории`);
 
-[...category.children].map(item => {
+[...category.children].forEach(item => {
   console.log(`Категория: ${item.children[0].textContent}`);
   console.log(`Количество элементов: ${item.children[1].children.length}`);
 });

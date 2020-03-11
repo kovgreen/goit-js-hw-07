@@ -30,17 +30,16 @@ const images = [
 
 const gallery = document.querySelector("#gallery");
 
-const pictures = createAllGallery(images);
-gallery.insertAdjacentHTML("afterbegin", pictures);
-
-function createGallery({ url, alt }) {
-  const galleryDOM = `
+const createGallery = ({ url, alt }) => {
+  return `
   <li class="gallery__item">
   <img src="${url}" alt="${alt}" width="400">
   </li>`;
   return galleryDOM;
-}
+};
 
-function createAllGallery(array) {
-  return array.map(item => createGallery(item)).join("");
-}
+const createAllGallery = images.reduce(
+  (acc, item) => (acc += createGallery(item)),
+  " "
+);
+gallery.insertAdjacentHTML("beforeend", createAllGallery);
