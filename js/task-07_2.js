@@ -25,5 +25,4 @@ const insertTags = textName => {
 };
 
 const createItem = arr => arr.map(elem => insertTags(elem));
-const itemList = createItem(ingredients);
-selectById.append(...itemList);
+selectById.append(...createItem(ingredients));

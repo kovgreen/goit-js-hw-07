@@ -7,6 +7,6 @@ const nameInput = document.querySelector("#name-input");
 const currentString = document.querySelector("#name-output");
 
 nameInput.addEventListener("input", e => {
-  currentString.textContent = e.currentTarget.value;
-  currentString !== "" ? currentString : "незнакомец";
+  currentString.textContent =
+    e.currentTarget.value !== "" ? nameInput.value : "незнакомец";
 });
